@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'accounts',
+    'realtors',
 ]
 
 MIDDLEWARE = [
@@ -69,10 +70,11 @@ WSGI_APPLICATION = 'realest_estate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realest_estate',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'password123',
-        'HOST': 'localhost'
+        'PASSWORD': '3FraQdxNBw6PFUoadvSz',
+        'HOST': 'containers-us-west-12.railway.app',
+        'PORT': 7324
     }
 }
 
