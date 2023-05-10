@@ -189,6 +189,6 @@ class SearchView(APIView):
         keywords = data['keywords']
         queryset = queryset.filter(description__icontains=keywords)
 
-        serializer = ListingSerializer(queryset, many=True)
+        serializer = ListingSerializer(queryset, many=True, context=self.get_renderer_context())
 
         return Response(serializer.data)
