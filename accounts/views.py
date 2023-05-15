@@ -41,9 +41,11 @@ class UserUpdateView(APIView):
         user = request.user
         name = request.data.get('name')
         email = request.data.get('email')
+        password = request.data.get('password')
         if name and email:
             user.name = name
             user.email = email
+            user.password = password
             user.save()
             serializer = UserSerializer(user, context=self.get_renderer_context()).data
             return Response(serializer, status=status.HTTP_200_OK)
